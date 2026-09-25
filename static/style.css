@@ -19,20 +19,20 @@ header span {
 }
 
 header nav {
-    display: flex;
-    align-items: center;
-    gap: 2em;
+    display: none;
 }
 
 nav a {
     text-decoration: none;
+    font-weight: bold;
+    color: rgb(10, 67, 105);
 }
 
 #index {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10vw;
-    margin: 3em;
+    display: flex;
+    margin: 2em;
+    gap: 2em;
+    flex-direction: column;
 }
 
 #page {
@@ -45,7 +45,7 @@ nav a {
     background-position: center;
     display: grid;
     border-radius: .2rem;
-    height: 40vw;
+    height: 40em;
     text-decoration: none;
     color: black;
 }
@@ -55,5 +55,47 @@ nav a {
     background-color: rgba(161, 161, 161, 0.644);
     padding: 2rem;
     border-radius: .2rem;
-    font-size: 3vw;
+    font-size: 2em;
+}
+
+#dropdown-button {
+    display: flex;
+    background-image: url(../assets/icons/menu.png);
+    background-size: cover;
+    background-color: transparent;
+    height: 4em;
+    width: 4em;
+    cursor: pointer;
+    border: 0;
+}
+
+#dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-top: 3em;
+}
+
+@media screen and (width >= 900px) { 
+    
+    #index {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+        margin: 3em;
+    }
+
+    #dropdown-button {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
+    #dropdown {
+        display: none;
+    }
 }
