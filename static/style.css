@@ -37,7 +37,8 @@ nav a {
 
 #page {
     color: rgb(255, 255, 255);
-    padding: 3em;
+    padding: 7em;
+    padding-top: 2em;
 }
 
 .card {
